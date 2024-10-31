@@ -9,6 +9,6 @@ import (
 func main() {
     str := pkg.ReadFileAndReturnString("file.txt")
     fmt.Println(str)
-    arr := internal.CharFrequency(&str,internal.FrequencyArrInit())
-    fmt.Print(arr.Arr)
+    arr,count := internal.CharFrequency(&str,internal.FrequencyArrInit())
+    fmt.Print(arr.Fs, " ", count)
 }
