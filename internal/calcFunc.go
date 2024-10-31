@@ -1,6 +1,8 @@
 package internal
 
-import "math"
+import (
+	"math"
+)
 
 func CharFrequency(text *string, arr FrequencyArr) (FrequencyArr, int) {
 	count := 0
@@ -23,5 +25,11 @@ func RelativeFrequency(Fs *map[string]int, count int, RelativeF *map[string]floa
 func IsCalc(RelativeF *map[string]float64, Is *map[string]int) {
 	for key, value := range *RelativeF {
 		(*Is)[key] = int(math.Log2(value))*-1
+	}
+}
+
+func EntropyCalc(RelativeF *map[string]float64, Is *map[string]int, Hs *map[string]float64){
+	for key := range *RelativeF {
+		(*Hs)[key] = (*RelativeF)[key] * float64((*Is)[key])
 	}
 }

@@ -23,4 +23,9 @@ func main() {
     for key, value := range arr.Is {
         fmt.Printf("Chiave: %s, Valore: %d\n", key, value)
     }
+
+    internal.EntropyCalc(&arr.RelativeF,&arr.Is, &arr.Hs)
+    for key, value := range arr.Hs {
+        fmt.Printf("Chiave: %s, Valore: %f\n", key, value)
+    }
 }
