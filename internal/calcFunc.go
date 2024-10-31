@@ -13,6 +13,8 @@ func CharFrequency(text *string, arr FrequencyArr) (FrequencyArr, int) {
 	return arr,count
 }
 
-func RelativeFrequency(){
-	
+func RelativeFrequency(Fs *map[string]int, count int, RelativeF *map[string]float64){
+	for key, value := range *Fs {
+		(*RelativeF)[key] = float64(value) / float64(count)
+    }
 }

@@ -10,5 +10,12 @@ func main() {
     str := pkg.ReadFileAndReturnString("file.txt")
     fmt.Println(str)
     arr,count := internal.CharFrequency(&str,internal.FrequencyArrInit())
-    fmt.Print(arr.Fs, " ", count)
+    for key, value := range arr.Fs {
+        fmt.Printf("Chiave: %s, Valore: %d\n", key, value)
+    }
+
+    internal.RelativeFrequency(&arr.Fs,count,&arr.RelativeF)
+    for key, value := range arr.RelativeF {
+        fmt.Printf("Chiave: %s, Valore: %f\n", key, value)
+    }
 }
