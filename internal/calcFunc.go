@@ -28,8 +28,12 @@ func IsCalc(RelativeF *map[string]float64, Is *map[string]int) {
 	}
 }
 
-func EntropyCalc(RelativeF *map[string]float64, Is *map[string]int, Hs *map[string]float64){
+func EntropyCalc(RelativeF *map[string]float64, Is *map[string]int, Hs *map[string]float64) float64{
+	entropyTot := 0.0
 	for key := range *RelativeF {
 		(*Hs)[key] = (*RelativeF)[key] * float64((*Is)[key])
+		entropyTot +=(*Hs)[key]
 	}
+
+	return entropyTot
 }
