@@ -7,7 +7,7 @@ import (
 
 func TestReadFileAndReturnString(t *testing.T){
 	t.Run("testing file reading", func(t *testing.T) {
-		if pkg.ReadFileAndReturnString("prova.txt")!="ciao"{
+		if pkg.ReadFileAndReturnString("prova.txt")!="ciaoo"{
 			t.Error("error reading file")
 		}
 	})
