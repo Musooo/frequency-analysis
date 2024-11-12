@@ -1,4 +1,0 @@
-fare rot contenuto file
-gli dai una stringa? e un numero e fai incrementare le lettere di quel numero 
-sottraendo -26 se va sopra le z, 
-fallo fare per tutte le 26 (?) combinazioni
